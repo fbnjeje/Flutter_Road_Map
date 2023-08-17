@@ -9,7 +9,15 @@ void main(){
   final List<String> abilities= ['impostor'];
   final sprites = <String>['Ditto./back.png','Ditto./front.png'];
   
+ //dynamic == null
   
+  dynamic errorMessage = 'Hola';
+  errorMessage = 123;
+  errorMessage = true;
+  errorMessage = [1,2,3,4,5];
+  errorMessage = {1,2,3,4,5};
+  errorMessage = () => true;
+  errorMessage = null;
   
   print("""
   
@@ -18,6 +26,5 @@ void main(){
   $isAlive
   $abilities
   $sprites
-  
   """);
 }
