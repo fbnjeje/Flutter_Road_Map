@@ -1,11 +1,22 @@
-void main(){
-  
+void fmain(){
   
 //   final windPlant = new EnergyPlant();
 }
 
+enum PlantType { nuclear, wind, water }
+
 abstract class EnergyPlant{
-  final energyLeft;
-  String type;
   
+  
+  double energyLeft;
+  PlantType type;
+  
+  EnergyPlant({
+    required this.energyLeft, 
+    required this.type
+    });
+    
+  void consumeEnergy(double amount){
+    
+  }
 }
