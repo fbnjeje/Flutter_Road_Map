@@ -1,6 +1,16 @@
-void fmain(){
+void main(){
+ 
+  final windPlant = WindPlant( initialEnergy : 100);
   
-//   final windPlant = new EnergyPlant();
+  print('Wind ${chargePhone(windPlant) }');
+}
+
+double chargePhone( EnergyPlant plant){
+  if(plant.energyLeft < 10){
+    throw Exception('Enought Energy');
+  }
+  
+  return plant.energyLeft - 10;
 }
 
 enum PlantType { nuclear, wind, water }
@@ -16,7 +26,20 @@ abstract class EnergyPlant{
     required this.type
     });
     
-  void consumeEnergy(double amount){
+  void consumeEnergy(double amount ){
     
+  }
+}
+
+
+
+class WindPlant extends EnergyPlant {
+  WindPlant({required double initialEnergy})
+    :super(energyLeft: initialEnergy, type: PlantType.wind);
+    
+  
+  @override
+  void consumeEnergy ( double amount ){
+    energyLeft -= amount;
   }
 }
