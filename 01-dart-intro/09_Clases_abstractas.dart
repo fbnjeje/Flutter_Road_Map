@@ -1,8 +1,11 @@
 void main(){
  
   final windPlant = WindPlant( initialEnergy : 100);
+  final nuclearPlant = NuclearPlant( energyLeft: 1000);
   
   print('Wind ${chargePhone(windPlant) }');
+  print('Nuclear ${chargePhone(nuclearPlant) }');
+  
 }
 
 double chargePhone( EnergyPlant plant){
@@ -19,7 +22,7 @@ abstract class EnergyPlant{
   
   
   double energyLeft;
-  PlantType type;
+  final PlantType type;
   
   EnergyPlant({
     required this.energyLeft, 
@@ -32,6 +35,25 @@ abstract class EnergyPlant{
 }
 
 
+class NuclearPlant implements EnergyPlant {
+  
+  
+  @override
+  double energyLeft;
+  
+  @override
+  final PlantType type = PlantType.nuclear;
+  
+  NuclearPlant({required this.energyLeft});
+  
+  
+  @override
+  void consumeEnergy ( double amount ){
+    energyLeft -= (amount  * 0.5);
+  }
+
+}
+
 
 class WindPlant extends EnergyPlant {
   WindPlant({required double initialEnergy})
@@ -43,3 +65,7 @@ class WindPlant extends EnergyPlant {
     energyLeft -= amount;
   }
 }
+
+
+
+
