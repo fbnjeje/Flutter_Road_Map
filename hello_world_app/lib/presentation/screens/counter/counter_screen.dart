@@ -25,10 +25,29 @@ class _CounterScreenState extends State<CounterScreen> {
               style:
                   const TextStyle(fontSize: 160, fontWeight: FontWeight.w100),
             ),
-            const Text(
-              'Clicks',
-              style: TextStyle(fontSize: 25),
+
+            /* 
+            * 2 maneras de Hacerlo --- primera
+            */
+
+            Text(
+              'Click${clickCounter == 0 ? '' : 's'}',
+              style: const TextStyle(fontSize: 25),
             ),
+
+            /* 
+            * 2 maneras de Hacerlo --- Segunda
+          */
+            // if (clickCounter == 0)
+            //   const Text(
+            //     'Click',
+            //     style: TextStyle(fontSize: 25),
+            //   )
+            // else
+            //   const Text(
+            //     'Clicks',
+            //     style: TextStyle(fontSize: 25),
+            //   )
           ],
         ),
       ),
@@ -40,10 +59,10 @@ class _CounterScreenState extends State<CounterScreen> {
         },
         child: const Icon(Icons.plus_one),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        child: const Icon(Icons.delete),
-      ),
+      // floatingActionButton: FloatingActionButton(
+      //   onPressed: () {},
+      //   child: const Icon(Icons.delete),
+      // ),
     );
   }
 }
