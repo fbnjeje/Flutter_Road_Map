@@ -17,6 +17,18 @@ class ChatScreen extends StatelessWidget {
         title: const Text('Mi amor 💗'),
         centerTitle: true,
       ),
+      body: _ChatView(),
     );
+  }
+}
+
+class _ChatView extends StatelessWidget {
+  const _ChatView({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container();
   }
 }
