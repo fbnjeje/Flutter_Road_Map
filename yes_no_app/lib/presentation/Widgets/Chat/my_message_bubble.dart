@@ -9,9 +9,12 @@ class MyMessageBubble extends StatelessWidget {
       children: [
         Container(
           decoration: const BoxDecoration(color: Colors.black),
-          child: Text(
-            'lorem Ipmsun 12 123 hola hola 123',
-            style: TextStyle(color: Colors.white),
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Text(
+              'lorem Ipmsun 12 123 hola hola 123',
+              style: TextStyle(color: Colors.white),
+            ),
           ),
         ),
       ],
