@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:yes_no_app/presentation/Widgets/Chat/my_message_bubble.dart';
 
 class ChatScreen extends StatelessWidget {
   const ChatScreen({super.key});
@@ -25,8 +26,33 @@ class ChatScreen extends StatelessWidget {
 class _ChatView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return const Column(
-      children: [],
+    return SafeArea(
+      child: Padding(
+        padding: const EdgeInsets.symmetric(
+          horizontal: 10,
+        ),
+        child: Column(
+          children: [
+            Expanded(
+                child: ListView.builder(
+              itemCount: 100,
+              itemBuilder: (context, index) {
+                return const MyMessageBubble();
+              },
+            )),
+            Text('Mundo')
+          ],
+        ),
+      ),
     );
   }
 }
+
+
+
+
+/*
+
+* SafeArea is used to the program doesnt go out from the literal the space of the screen* 
+
+*/
