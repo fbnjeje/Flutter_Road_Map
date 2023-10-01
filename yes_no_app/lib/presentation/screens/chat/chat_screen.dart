@@ -43,7 +43,7 @@ class _ChatView extends StatelessWidget {
                     : const MyMessageBubble();
               },
             )),
-            Text('Mundo')
+            const Text('Mundo')
           ],
         ),
       ),
