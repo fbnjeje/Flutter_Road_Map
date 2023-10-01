@@ -16,7 +16,7 @@ class ChatScreen extends StatelessWidget {
           ),
         ),
         title: const Text('Mi amor 💗'),
-        centerTitle: true,
+        centerTitle: false,
       ),
       body: _ChatView(),
     );
