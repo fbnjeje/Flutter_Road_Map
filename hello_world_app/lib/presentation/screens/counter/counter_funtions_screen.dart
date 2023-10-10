@@ -95,6 +95,7 @@ class _CounterFuntionsScreenState extends State<CounterFuntionsScreen> {
             ),
           ],
         ));
+        
   }
 }
 
@@ -114,6 +115,8 @@ class CustomButton extends StatelessWidget {
       shape: const StadiumBorder(),
       onPressed: onPressed,
       backgroundColor: const Color.fromRGBO(205, 247, 186, 1),
+      // mini: true,
+
       child: Icon(icon),
     );
   }
