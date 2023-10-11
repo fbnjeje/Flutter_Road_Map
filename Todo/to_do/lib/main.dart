@@ -1,16 +1,14 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyWidget());
+  runApp(const MyWidget());
 }
 
 class MyWidget extends StatelessWidget {
-  double counterNumber;
-
-  MyWidget({super.key, this.counterNumber = 0});
-
+  const MyWidget({super.key});
   @override
   Widget build(BuildContext context) {
+    int counterNumber = 0;
     return StatefulBuilder(builder: (context, refresh) {
       return MaterialApp(
         debugShowCheckedModeBanner: false,
@@ -25,7 +23,11 @@ class MyWidget extends StatelessWidget {
               IconButton(
                   onPressed: () {},
                   icon: const Icon(Icons.account_circle_rounded)),
-              IconButton(onPressed: () {}, icon: const Icon(Icons.public_sharp))
+              IconButton(
+                  onPressed: () {},
+                  icon: const Icon(
+                    Icons.public_sharp,
+                  ))
             ],
             title: const Text(
               'holagente',
@@ -34,6 +36,7 @@ class MyWidget extends StatelessWidget {
           ),
           body: Center(
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 IconButton(
                     onPressed: () {
@@ -41,7 +44,10 @@ class MyWidget extends StatelessWidget {
                         counterNumber++;
                       });
                     },
-                    icon: const Icon(Icons.plus_one)),
+                    icon: const Icon(
+                      Icons.plus_one,
+                      size: 20,
+                    )),
                 Text('Click $counterNumber'),
               ],
             ),
