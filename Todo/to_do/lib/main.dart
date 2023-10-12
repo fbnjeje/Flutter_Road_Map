@@ -59,17 +59,7 @@ class _MyWidget extends State<ScaffoldExample> {
                   '$_counterNumber',
                   style: const TextStyle(fontSize: 200),
                 ),
-                IconButton(
-                    onPressed: () {
-                      setState(() {
-                        _counterNumber++;
-                      });
-                    },
-                    icon: const Icon(
-                      Icons.plus_one,
-                      size: 20,
-                    )),
-                const Text('Click'),
+                Text('Click${_counterNumber == 0 ? '' : 's'}'),
               ],
             ),
           ),
