@@ -57,7 +57,8 @@ class _MyWidget extends State<ScaffoldExample> {
               children: [
                 Text(
                   '$_counterNumber',
-                  style: const TextStyle(fontSize: 200),
+                  style: const TextStyle(
+                      fontSize: 200, fontWeight: FontWeight.w100),
                 ),
                 Text('Click${_counterNumber == 0 ? '' : 's'}'),
               ],
