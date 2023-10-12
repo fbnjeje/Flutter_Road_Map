@@ -1,16 +1,33 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyWidget());
+  runApp(const ScaffoldExampleApp());
 }
 
-class MyWidget extends StatelessWidget {
-  const MyWidget({super.key});
+class ScaffoldExampleApp extends StatelessWidget {
+  const ScaffoldExampleApp({super.key});
+
   @override
   Widget build(BuildContext context) {
-    int counterNumber = 0;
-    return StatefulBuilder(builder: (context, refresh) {
-      return MaterialApp(
+    return const MaterialApp(
+      home: ScaffoldExample(),
+    );
+  }
+}
+
+class ScaffoldExample extends StatefulWidget {
+  const ScaffoldExample({super.key});
+
+  @override
+  State<ScaffoldExample> createState() => _MyWidget();
+}
+
+class _MyWidget extends State<ScaffoldExample> {
+  int _counterNumber = 0;
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
         debugShowCheckedModeBanner: false,
         home: Scaffold(
           appBar: AppBar(
@@ -38,22 +55,53 @@ class MyWidget extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                Text(
+                  '$_counterNumber',
+                  style: const TextStyle(fontSize: 200),
+                ),
                 IconButton(
                     onPressed: () {
-                      refresh(() {
-                        counterNumber++;
+                      setState(() {
+                        _counterNumber++;
                       });
                     },
                     icon: const Icon(
                       Icons.plus_one,
                       size: 20,
                     )),
-                Text('Click $counterNumber'),
+                const Text('Click'),
               ],
             ),
           ),
-        ),
-      );
-    });
+          floatingActionButton: Column(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              IconButton(
+                onPressed: () {
+                  setState(() {
+                    _counterNumber = 0;
+                  });
+                },
+                icon: const Icon(Icons.replay_outlined),
+              ),
+              IconButton(
+                onPressed: () {
+                  return setState(() {
+                    if (_counterNumber > 0) _counterNumber--;
+                  });
+                },
+                icon: const Icon(Icons.exposure_minus_1),
+              ),
+              IconButton(
+                onPressed: () {
+                  setState(() {
+                    _counterNumber++;
+                  });
+                },
+                icon: const Icon(Icons.add),
+              ),
+            ],
+          ),
+        ));
   }
 }
