@@ -30,22 +30,17 @@ class _MyWidget extends State<ScaffoldExample> {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         home: Scaffold(
-          appBar: AppBar(
-            leading: IconButton(
-              onPressed: () {},
-              icon: const Icon(Icons.menu),
-              tooltip: 'Open Menu',
+          drawer: const Drawer(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text('data'),
+                Text('data'),
+                Text('data'),
+              ],
             ),
-            actions: <Widget>[
-              IconButton(
-                  onPressed: () {},
-                  icon: const Icon(Icons.account_circle_rounded)),
-              IconButton(
-                  onPressed: () {},
-                  icon: const Icon(
-                    Icons.public_sharp,
-                  ))
-            ],
+          ),
+          appBar: AppBar(
             title: const Text(
               'holagente',
               style: TextStyle(fontSize: 20),
