@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:to_do/screens/maps/maps.dart';
 
 void main() {
   runApp(const ScaffoldExampleApp());
@@ -36,14 +37,28 @@ class _MyWidget extends State<ScaffoldExample> {
                 Container(
                   width: 400,
                   height: 400,
-                  child: Image.asset('Assets/1.png'),
-                )
+                  child: Image.asset('assets/1.png'),
+                ),
+                Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      TextButton(child: const Text('Home'), onPressed: () {}),
+                      TextButton(
+                          child: const Text('Maps'),
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const Maps()));
+                          }),
+                      TextButton(child: const Text('To-Do'), onPressed: () {}),
+                    ])
               ],
             ),
           ),
           appBar: AppBar(
             title: const Text(
-              'holagente',
+              'Home Counter',
               style: TextStyle(fontSize: 20),
             ),
           ),
