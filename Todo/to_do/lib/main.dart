@@ -30,13 +30,14 @@ class _MyWidget extends State<ScaffoldExample> {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         home: Scaffold(
-          drawer: const Drawer(
+          drawer: Drawer(
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text('data'),
-                Text('data'),
-                Text('data'),
+                Container(
+                  width: 400,
+                  height: 400,
+                  child: Image.asset('Assets/1.png'),
+                )
               ],
             ),
           ),
