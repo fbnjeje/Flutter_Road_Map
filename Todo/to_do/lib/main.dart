@@ -57,6 +57,8 @@ class _MyWidget extends State<ScaffoldExample> {
             ),
           ),
           appBar: AppBar(
+            backgroundColor: Color.fromRGBO(0, 0, 0, 1),
+            shadowColor: null,
             title: const Text(
               'Home Counter',
               style: TextStyle(fontSize: 20),
