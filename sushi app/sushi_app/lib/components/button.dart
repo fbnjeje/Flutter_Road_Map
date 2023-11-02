@@ -8,7 +8,11 @@ class MyButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: const BoxDecoration(color: Color.fromARGB(255, 125, 77, 74)),
-      child: Text(text),
+      padding: const EdgeInsets.all(20),
+      child: Text(
+        text,
+        style: const TextStyle(color: Colors.white),
+      ),
     );
   }
 }
