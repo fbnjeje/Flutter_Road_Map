@@ -13,14 +13,20 @@ class IntroPage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            //SPACE
+
             const SizedBox(height: 25),
+
             //shop Name
+
             Text(
               "KYOTO'S SUSHI",
               style:
                   GoogleFonts.dmSerifDisplay(fontSize: 28, color: Colors.white),
             ),
+
             //SPACE
+
             const SizedBox(height: 25),
 
             //icon
@@ -32,7 +38,22 @@ class IntroPage extends StatelessWidget {
 
             //title
 
+            Text(
+              "THE TASTE OF JAPANISE FOOD",
+              style:
+                  GoogleFonts.dmSerifDisplay(fontSize: 28, color: Colors.white),
+            ),
+
+            //LITTLE SPACE
+
+            const SizedBox(height: 10),
+
             //subtitle
+
+            Text(
+              "Feel the taste of the most popular Japanese food from anywhere and anytime",
+              style: TextStyle(color: Colors.grey[300], height: 2),
+            )
 
             //getStarted button
           ],
