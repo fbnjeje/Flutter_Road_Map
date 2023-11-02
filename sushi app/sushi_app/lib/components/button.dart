@@ -7,11 +7,23 @@ class MyButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: const BoxDecoration(color: Color.fromARGB(255, 125, 77, 74)),
+      decoration: BoxDecoration(
+          color: const Color.fromARGB(255, 125, 77, 74),
+          borderRadius: BorderRadius.circular(40)),
       padding: const EdgeInsets.all(20),
-      child: Text(
-        text,
-        style: const TextStyle(color: Colors.white),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text(
+            text,
+            style: const TextStyle(color: Colors.white),
+          ),
+          const SizedBox(width: 20),
+          const Icon(
+            Icons.forward,
+            color: Colors.white,
+          )
+        ],
       ),
     );
   }
