@@ -24,8 +24,14 @@ class IntroPage extends StatelessWidget {
 
           Padding(
             padding: const EdgeInsets.all(50.0),
-            child: Image.asset('lib/assets/sushi (1).png'),
-          )
+            child: Image.asset('lib/assets/sushi (2).png'),
+          ),
+
+          //title
+
+          //subtitle
+
+          //getStarted button
         ],
       ),
     );
