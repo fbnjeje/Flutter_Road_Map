@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:sushi_app/components/button.dart';
 
 class IntroPage extends StatelessWidget {
   const IntroPage({super.key});
@@ -53,9 +54,15 @@ class IntroPage extends StatelessWidget {
             Text(
               "Feel the taste of the most popular Japanese food from anywhere and anytime",
               style: TextStyle(color: Colors.grey[300], height: 2),
-            )
+            ),
+
+            //SPACE
+
+            const SizedBox(height: 25),
 
             //getStarted button
+
+            const MyButton(text: "Get Started")
           ],
         ),
       ),
