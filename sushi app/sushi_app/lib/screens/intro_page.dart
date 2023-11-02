@@ -5,10 +5,15 @@ class IntroPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       backgroundColor: const Color.fromARGB(255, 138, 60, 55),
       body: Column(
-        children: [],
+        children: [
+          SizedBox(
+            height: 25,
+          ),
+          Text("hola gente de yt")
+        ],
       ),
     );
   }
