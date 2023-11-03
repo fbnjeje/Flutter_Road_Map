@@ -67,7 +67,7 @@ class IntroPage extends StatelessWidget {
               text: "Get Started",
               onTap: () {
                 //go to next page
-                Navigator.push(context, route)
+                Navigator.pushNamed(context, '/intropage');
               },
             )
           ],
