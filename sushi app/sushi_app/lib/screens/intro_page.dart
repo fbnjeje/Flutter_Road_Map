@@ -13,6 +13,7 @@ class IntroPage extends StatelessWidget {
         padding: const EdgeInsets.all(25.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             //SPACE
 
@@ -33,7 +34,7 @@ class IntroPage extends StatelessWidget {
             //icon
 
             Padding(
-              padding: const EdgeInsets.all(50.0),
+              padding: const EdgeInsets.all(20.0),
               child: Image.asset('lib/assets/sushi (1).png'),
             ),
 
@@ -42,7 +43,7 @@ class IntroPage extends StatelessWidget {
             Text(
               "THE TASTE OF JAPANISE FOOD",
               style:
-                  GoogleFonts.dmSerifDisplay(fontSize: 28, color: Colors.white),
+                  GoogleFonts.dmSerifDisplay(fontSize: 50, color: Colors.white),
             ),
 
             //LITTLE SPACE
