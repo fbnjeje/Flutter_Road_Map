@@ -24,14 +24,16 @@ class _MenuPage extends State<MenuPage> {
           style: TextStyle(color: Colors.grey[900]),
         ),
       ),
-      body: Column(children: [
+      body: const Column(children: [
         //promo banner
-
+        Row(
+          children: [Text('Get a 32% Promo')],
+        )
         //search bar
 
-        //popular food
-
         //menu list
+
+        //popular food
       ]),
     );
   }
