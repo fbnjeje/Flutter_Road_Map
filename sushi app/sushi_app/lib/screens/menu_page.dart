@@ -26,6 +26,8 @@ class _MenuPage extends State<MenuPage> {
       ),
       body: Column(children: [
         //promo banner
+
+        //search bar
       ]),
     );
   }
