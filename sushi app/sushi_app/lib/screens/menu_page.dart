@@ -28,6 +28,8 @@ class _MenuPage extends State<MenuPage> {
         //promo banner
 
         //search bar
+
+        //popular food
       ]),
     );
   }
