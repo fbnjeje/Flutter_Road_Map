@@ -31,9 +31,11 @@ class _MenuPage extends State<MenuPage> {
         //promo banner
         Container(
           decoration: BoxDecoration(
-              color: myPrimaryColor, borderRadius: BorderRadius.circular(29)),
+              color: myPrimaryColor,
+              //border radius
+              borderRadius: BorderRadius.circular(29)),
           margin: const EdgeInsets.symmetric(horizontal: 20),
-          padding: const EdgeInsets.all(25),
+          padding: const EdgeInsets.symmetric(vertical: 25, horizontal: 40),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -59,9 +61,22 @@ class _MenuPage extends State<MenuPage> {
               ),
             ],
           ),
-        )
-        //search bar
+        ),
+        const SizedBox(
+          height: 25,
+        ),
 
+        //search bar
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 25),
+          child: TextField(
+            decoration: InputDecoration(
+                border: const OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.white)),
+                focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: myPrimaryColor))),
+          ),
+        )
         //menu list
 
         //popular food
