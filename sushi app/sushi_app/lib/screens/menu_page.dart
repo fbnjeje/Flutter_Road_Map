@@ -40,6 +40,7 @@ class _MenuPage extends State<MenuPage> {
                 children: [
                   const Text('Get a 32% Promo'),
 
+                  const SizedBox(height: 20),
                   //reedem button
 
                   //image
