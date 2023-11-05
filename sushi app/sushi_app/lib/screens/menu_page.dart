@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:sushi_app/components/button.dart';
 import 'package:sushi_app/theme/Colors.dart';
 
@@ -34,20 +35,28 @@ class _MenuPage extends State<MenuPage> {
           margin: const EdgeInsets.symmetric(horizontal: 20),
           padding: const EdgeInsets.all(25),
           child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               //promo message
               Column(
                 children: [
-                  const Text('Get a 32% Promo'),
+                  //reedem button
+                  Text(
+                    'Get a 32% Promo',
+                    style: GoogleFonts.dmSerifDisplay(
+                        fontSize: 20, color: Colors.white),
+                  ),
 
                   const SizedBox(height: 20),
-                  //reedem button
-
-                  //image
 
                   MyButton(text: 'Redeem', onTap: () {})
                 ],
-              )
+              ),
+              //image
+              Image.asset(
+                'lib/assets/sushi (2).png',
+                height: 100,
+              ),
             ],
           ),
         )
