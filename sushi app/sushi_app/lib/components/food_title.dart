@@ -10,6 +10,15 @@ class FoodTitle extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
           color: Colors.grey[100], borderRadius: BorderRadius.circular(20)),
+      child: Column(
+        children: [
+          //imga
+
+          //text
+
+          //prince + rating
+        ],
+      ),
     );
   }
 }
