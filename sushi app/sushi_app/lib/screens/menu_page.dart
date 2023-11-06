@@ -27,7 +27,7 @@ class _MenuPage extends State<MenuPage> {
           style: TextStyle(color: Colors.grey[900]),
         ),
       ),
-      body: Column(children: [
+      body: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
         //promo banner
         Container(
           decoration: BoxDecoration(
@@ -62,6 +62,7 @@ class _MenuPage extends State<MenuPage> {
             ],
           ),
         ),
+
         const SizedBox(
           height: 25,
         ),
@@ -78,9 +79,20 @@ class _MenuPage extends State<MenuPage> {
                     borderSide: BorderSide(color: myPrimaryColor),
                     borderRadius: BorderRadius.circular(20))),
           ),
-        )
-        //menu list
+        ),
 
+        const SizedBox(height: 25),
+        //menu list
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 0),
+          child: Text(
+            'Food Menu',
+            style: TextStyle(
+                fontSize: 29,
+                fontWeight: FontWeight.w900,
+                color: Colors.grey[800]),
+          ),
+        ),
         //popular food
       ]),
     );
