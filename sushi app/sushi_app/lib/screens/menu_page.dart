@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sushi_app/components/button.dart';
+import 'package:sushi_app/models/food.dart';
 import 'package:sushi_app/theme/Colors.dart';
 
 class MenuPage extends StatefulWidget {
@@ -11,6 +12,14 @@ class MenuPage extends StatefulWidget {
 }
 
 class _MenuPage extends State<MenuPage> {
+  List foodMenu = [
+    Food(
+        name: 'Sushi',
+        price: '21.00',
+        imgPath: 'lib/assets/sushi.png',
+        rating: '4.4')
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -82,6 +91,7 @@ class _MenuPage extends State<MenuPage> {
         ),
 
         const SizedBox(height: 25),
+
         //menu list
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 0),
@@ -93,6 +103,9 @@ class _MenuPage extends State<MenuPage> {
                 color: Colors.grey[800]),
           ),
         ),
+
+        const SizedBox(height: 10)
+
         //popular food
       ]),
     );
