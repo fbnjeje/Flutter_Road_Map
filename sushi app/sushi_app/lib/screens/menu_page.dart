@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sushi_app/components/button.dart';
+import 'package:sushi_app/components/food_title.dart';
 import 'package:sushi_app/models/food.dart';
 import 'package:sushi_app/theme/Colors.dart';
 
