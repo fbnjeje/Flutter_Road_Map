@@ -17,7 +17,12 @@ class _MenuPage extends State<MenuPage> {
         name: 'Sushi',
         price: '21.00',
         imgPath: 'lib/assets/sushi.png',
-        rating: '4.4')
+        rating: '4.4'),
+    Food(
+        name: 'Tuna',
+        price: '15.00',
+        imgPath: 'lib/assets/uramaki.png',
+        rating: '4.9'),
   ];
 
   @override
