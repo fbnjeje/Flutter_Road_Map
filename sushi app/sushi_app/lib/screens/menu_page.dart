@@ -71,10 +71,12 @@ class _MenuPage extends State<MenuPage> {
           padding: const EdgeInsets.symmetric(horizontal: 25),
           child: TextField(
             decoration: InputDecoration(
-                border: const OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.white)),
+                border: OutlineInputBorder(
+                    borderSide: const BorderSide(color: Colors.white),
+                    borderRadius: BorderRadius.circular(20)),
                 focusedBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: myPrimaryColor))),
+                    borderSide: BorderSide(color: myPrimaryColor),
+                    borderRadius: BorderRadius.circular(20))),
           ),
         )
         //menu list
