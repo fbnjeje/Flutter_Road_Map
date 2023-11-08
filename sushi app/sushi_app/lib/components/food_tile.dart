@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sushi_app/models/food.dart';
 
-class FoodTitle extends StatelessWidget {
+class FoodTile extends StatelessWidget {
   final Food food;
-  const FoodTitle({super.key, required this.food});
+  const FoodTile({super.key, required this.food});
 
   @override
   Widget build(BuildContext context) {
@@ -34,7 +34,7 @@ class FoodTitle extends StatelessWidget {
               Text(food.price),
 
               //rate
-              Icon(Icons.star),
+              const Icon(Icons.star),
               Text(food.rating)
             ]),
           )

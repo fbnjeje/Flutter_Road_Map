@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sushi_app/components/button.dart';
-import 'package:sushi_app/components/food_title.dart';
+import 'package:sushi_app/components/food_tile.dart';
 import 'package:sushi_app/models/food.dart';
 import 'package:sushi_app/theme/Colors.dart';
 
@@ -115,8 +115,12 @@ class _MenuPage extends State<MenuPage> {
         //popular food
 
         Expanded(
-            child: ListView.builder(
-                itemBuilder: ((context, index) => FoodTitle())))
+          child: ListView.builder(
+            itemBuilder: (context, index) => FoodTile(
+              food: foodMenu[index],
+            ),
+          ),
+        )
       ]),
     );
   }
