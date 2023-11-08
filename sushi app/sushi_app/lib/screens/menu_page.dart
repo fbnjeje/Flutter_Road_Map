@@ -117,6 +117,7 @@ class _MenuPage extends State<MenuPage> {
         Expanded(
           child: ListView.builder(
             itemBuilder: (context, index) => FoodTile(
+              itemCount: foodMenu.length,
               food: foodMenu[index],
             ),
           ),

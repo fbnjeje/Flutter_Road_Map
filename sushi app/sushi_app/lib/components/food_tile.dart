@@ -4,7 +4,7 @@ import 'package:sushi_app/models/food.dart';
 
 class FoodTile extends StatelessWidget {
   final Food food;
-  const FoodTile({super.key, required this.food});
+  const FoodTile({super.key, required this.food, required int itemCount});
 
   @override
   Widget build(BuildContext context) {
