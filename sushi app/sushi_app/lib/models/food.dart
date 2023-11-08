@@ -1,5 +1,3 @@
-import 'package:flutter/material.dart';
-
 class Food {
   String name;
   String price;

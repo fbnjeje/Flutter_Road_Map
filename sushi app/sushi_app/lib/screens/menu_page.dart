@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sushi_app/components/button.dart';
 import 'package:sushi_app/components/food_tile.dart';
@@ -115,10 +116,14 @@ class _MenuPage extends State<MenuPage> {
         //popular food
 
         Expanded(
-          child: ListView.builder(
-            itemBuilder: (context, index) => FoodTile(
-              itemCount: foodMenu.length,
-              food: foodMenu[index],
+          child: Padding(
+            padding: const EdgeInsets.only(left: 25),
+            child: ListView.builder(
+              scrollDirection: Axis.horizontal,
+              itemBuilder: (context, index) => FoodTile(
+                itemCount: foodMenu.length,
+                food: foodMenu[index],
+              ),
             ),
           ),
         )
