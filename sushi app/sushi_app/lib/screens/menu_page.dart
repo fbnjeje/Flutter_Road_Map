@@ -73,7 +73,7 @@ class _MenuPage extends State<MenuPage> {
               //image
               Image.asset(
                 'lib/assets/sushi (2).png',
-                height: 100,
+                height: 82,
               ),
             ],
           ),
@@ -88,12 +88,13 @@ class _MenuPage extends State<MenuPage> {
           padding: const EdgeInsets.symmetric(horizontal: 25),
           child: TextField(
             decoration: InputDecoration(
-                border: OutlineInputBorder(
+                focusedBorder: OutlineInputBorder(
                     borderSide: const BorderSide(color: Colors.white),
                     borderRadius: BorderRadius.circular(20)),
-                focusedBorder: OutlineInputBorder(
+                enabledBorder: OutlineInputBorder(
                     borderSide: BorderSide(color: myPrimaryColor),
-                    borderRadius: BorderRadius.circular(20))),
+                    borderRadius: BorderRadius.circular(20)),
+                hintText: 'Search Here...'),
           ),
         ),
 
@@ -147,7 +148,8 @@ class _MenuPage extends State<MenuPage> {
                     'lib/assets/sushi (2).png',
                     height: 60,
                   ),
-                  // const SizedBox(height: 25),
+
+                  const SizedBox(height: 25),
 
                   //info
 

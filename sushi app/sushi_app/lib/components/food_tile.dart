@@ -22,18 +22,18 @@ class FoodTile extends StatelessWidget {
 
           Image.asset(
             food.imgPath,
-            height: 220,
+            height: 155,
           ),
 
           //text
           Text(
             food.name,
-            style: GoogleFonts.dmSerifDisplay(fontSize: 35),
+            style: GoogleFonts.dmSerifDisplay(fontSize: 30),
           ),
           //prince + rating
 
           SizedBox(
-            width: 240,
+            width: 170,
             child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -41,7 +41,7 @@ class FoodTile extends StatelessWidget {
                   Text(
                     food.price,
                     style: const TextStyle(
-                        fontWeight: FontWeight.bold, fontSize: 20),
+                        fontWeight: FontWeight.bold, fontSize: 18),
                   ),
                   //rate
                   Row(children: [
@@ -51,7 +51,7 @@ class FoodTile extends StatelessWidget {
                     ),
                     Text(
                       food.rating,
-                      style: const TextStyle(color: Colors.grey, fontSize: 20),
+                      style: const TextStyle(color: Colors.grey, fontSize: 18),
                     )
                   ]),
                 ]),
