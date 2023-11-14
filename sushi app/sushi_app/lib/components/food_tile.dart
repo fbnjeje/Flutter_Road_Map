@@ -12,19 +12,21 @@ class FoodTile extends StatelessWidget {
       decoration: BoxDecoration(
           color: Colors.grey[100], borderRadius: BorderRadius.circular(20)),
       margin: const EdgeInsets.only(left: 25),
+      padding: const EdgeInsets.all(25),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           //imga
 
           Image.asset(
             food.imgPath,
-            height: 140,
+            height: 200,
           ),
 
           //text
           Text(
             food.name,
-            style: GoogleFonts.dmSerifDisplay(fontSize: 20),
+            style: GoogleFonts.dmSerifDisplay(fontSize: 25),
           ),
           //prince + rating
 
@@ -35,7 +37,10 @@ class FoodTile extends StatelessWidget {
               Text(food.price),
 
               //rate
-              const Icon(Icons.star),
+              Icon(
+                Icons.star,
+                color: Colors.yellow[900],
+              ),
               Text(food.rating)
             ]),
           )

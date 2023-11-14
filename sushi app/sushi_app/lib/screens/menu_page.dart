@@ -116,14 +116,11 @@ class _MenuPage extends State<MenuPage> {
         //popular food
 
         Expanded(
-          child: Padding(
-            padding: const EdgeInsets.only(left: 25),
-            child: ListView.builder(
-              scrollDirection: Axis.horizontal,
-              itemBuilder: (context, index) => FoodTile(
-                itemCount: foodMenu.length,
-                food: foodMenu[index],
-              ),
+          child: ListView.builder(
+            scrollDirection: Axis.horizontal,
+            itemBuilder: (context, index) => FoodTile(
+              itemCount: foodMenu.length,
+              food: foodMenu[index],
             ),
           ),
         )
