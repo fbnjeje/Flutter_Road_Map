@@ -111,7 +111,7 @@ class _MenuPage extends State<MenuPage> {
           ),
         ),
 
-        const SizedBox(height: 10),
+        const SizedBox(height: 25),
 
         //food view
         Expanded(
@@ -138,21 +138,33 @@ class _MenuPage extends State<MenuPage> {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
+              //Guide line
               Row(
                 children: [
+                  //Image
+
                   Image.asset(
                     'lib/assets/sushi (2).png',
                     height: 60,
                   ),
-                  const SizedBox(height: 25),
+                  // const SizedBox(height: 25),
+
+                  //info
+
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
+                      //text
+
                       Text(
                         "Sancocho's sushis",
                         style: GoogleFonts.dmSerifDisplay(fontSize: 25),
                       ),
+
                       const SizedBox(height: 10),
+
+                      //text
+
                       Text(
                         '\$ 21.99',
                         style: TextStyle(color: Colors.grey[700]),
@@ -161,6 +173,8 @@ class _MenuPage extends State<MenuPage> {
                   ),
                 ],
               ),
+
+              //heart Icon
               const Icon(
                 Icons.favorite_outline,
                 color: Colors.grey,
