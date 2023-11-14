@@ -131,6 +131,8 @@ class _MenuPage extends State<MenuPage> {
         //popular food
 
         Container(
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(20), color: Colors.grey[100]),
           child: Row(
             children: [
               Image.asset(
@@ -138,11 +140,14 @@ class _MenuPage extends State<MenuPage> {
                 height: 80,
               ),
               Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
                     "Sancocho's sushis",
                     style: GoogleFonts.dmSerifDisplay(fontSize: 18),
-                  )
+                  ),
+                  const SizedBox(height: 10),
+                  const Text('\$ 21.99')
                 ],
               )
             ],
