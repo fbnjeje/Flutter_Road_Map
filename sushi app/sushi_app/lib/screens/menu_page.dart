@@ -113,8 +113,7 @@ class _MenuPage extends State<MenuPage> {
 
         const SizedBox(height: 10),
 
-        //popular food
-
+        //food view
         Expanded(
           child: ListView.builder(
             scrollDirection: Axis.horizontal,
@@ -122,6 +121,31 @@ class _MenuPage extends State<MenuPage> {
             itemBuilder: (context, index) => FoodTile(
               food: foodMenu[index],
             ),
+          ),
+        ),
+
+        //space
+
+        const SizedBox(height: 25),
+
+        //popular food
+
+        Container(
+          child: Row(
+            children: [
+              Image.asset(
+                'lib/assets/sushi (2).png',
+                height: 80,
+              ),
+              Column(
+                children: [
+                  Text(
+                    "Sancocho's sushis",
+                    style: GoogleFonts.dmSerifDisplay(fontSize: 18),
+                  )
+                ],
+              )
+            ],
           ),
         )
       ]),
