@@ -4,7 +4,9 @@ import 'package:sushi_app/models/food.dart';
 
 class FoodTile extends StatelessWidget {
   final Food food;
-  const FoodTile({super.key, required this.food, required int itemCount});
+  const FoodTile({super.key, required this.food});
+
+  get children => null;
 
   @override
   Widget build(BuildContext context) {
@@ -32,17 +34,26 @@ class FoodTile extends StatelessWidget {
 
           SizedBox(
             width: 160,
-            child: Row(children: [
-              //price
-              Text(food.price),
-
-              //rate
-              Icon(
-                Icons.star,
-                color: Colors.yellow[900],
-              ),
-              Text(food.rating)
-            ]),
+            child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  //price
+                  Text(
+                    food.price,
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  ),
+                  //rate
+                  Row(children: [
+                    Icon(
+                      Icons.star,
+                      color: Colors.yellow[900],
+                    ),
+                    Text(
+                      food.rating,
+                      style: const TextStyle(color: Colors.grey),
+                    )
+                  ]),
+                ]),
           )
         ],
       ),
