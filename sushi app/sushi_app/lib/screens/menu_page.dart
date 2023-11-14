@@ -134,24 +134,33 @@ class _MenuPage extends State<MenuPage> {
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20), color: Colors.grey[100]),
           margin: const EdgeInsets.only(left: 25, right: 25, bottom: 25),
-          padding: const EdgeInsets.all(25),
+          padding: const EdgeInsets.all(20),
           child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Image.asset(
-                'lib/assets/sushi (2).png',
-                height: 80,
-              ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+              Row(
                 children: [
-                  Text(
-                    "Sancocho's sushis",
-                    style: GoogleFonts.dmSerifDisplay(fontSize: 18),
+                  Image.asset(
+                    'lib/assets/sushi (2).png',
+                    height: 90,
                   ),
-                  const SizedBox(height: 10),
-                  const Text('\$ 21.99')
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        "Sancocho's sushis",
+                        style: GoogleFonts.dmSerifDisplay(fontSize: 18),
+                      ),
+                      const SizedBox(height: 10),
+                      Text(
+                        '\$ 21.99',
+                        style: TextStyle(color: Colors.grey[700]),
+                      )
+                    ],
+                  ),
                 ],
-              )
+              ),
+              const Icon(Icons.favorite_outline, color: Colors.grey, height)
             ],
           ),
         )
