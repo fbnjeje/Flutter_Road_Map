@@ -62,7 +62,7 @@ class _MenuPage extends State<MenuPage> {
                   Text(
                     'Get a 32% Promo',
                     style: GoogleFonts.dmSerifDisplay(
-                        fontSize: 20, color: Colors.white),
+                        fontSize: 25, color: Colors.white),
                   ),
 
                   const SizedBox(height: 20),
@@ -142,14 +142,15 @@ class _MenuPage extends State<MenuPage> {
                 children: [
                   Image.asset(
                     'lib/assets/sushi (2).png',
-                    height: 90,
+                    height: 60,
                   ),
+                  const SizedBox(height: 25),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
                         "Sancocho's sushis",
-                        style: GoogleFonts.dmSerifDisplay(fontSize: 18),
+                        style: GoogleFonts.dmSerifDisplay(fontSize: 25),
                       ),
                       const SizedBox(height: 10),
                       Text(
@@ -160,7 +161,11 @@ class _MenuPage extends State<MenuPage> {
                   ),
                 ],
               ),
-              const Icon(Icons.favorite_outline, color: Colors.grey, height)
+              const Icon(
+                Icons.favorite_outline,
+                color: Colors.grey,
+                size: 38,
+              )
             ],
           ),
         )
