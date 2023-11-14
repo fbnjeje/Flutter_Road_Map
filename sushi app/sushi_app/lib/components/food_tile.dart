@@ -11,6 +11,7 @@ class FoodTile extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
           color: Colors.grey[100], borderRadius: BorderRadius.circular(20)),
+      margin: const EdgeInsets.only(left: 25),
       child: Column(
         children: [
           //imga
