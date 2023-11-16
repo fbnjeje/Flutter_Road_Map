@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sushi_app/models/food.dart';
+import 'package:sushi_app/theme/colors.dart';
 
 class FoodDetailsPage extends StatefulWidget {
   final Food food;
@@ -15,15 +16,15 @@ class _FoodDetailsPageState extends State<FoodDetailsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.transparent,
-          elevation: 0,
-          foregroundColor: Colors.grey[900],
-        ),
-        body: Column(
-          children: [
-            Expanded(
-                child: Padding(
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        foregroundColor: Colors.grey[900],
+      ),
+      body: Column(
+        children: [
+          Expanded(
+            child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 25),
               child: ListView(
                 children: [
@@ -77,8 +78,20 @@ class _FoodDetailsPageState extends State<FoodDetailsPage> {
                   )
                 ],
               ),
-            ))
-          ],
-        ));
+            ),
+          ),
+
+          //TODO Quality + cuantity + add to cart
+
+          Container(
+            color: myPrimaryColor,
+
+            //Price + quantity
+
+            //add to cart
+          )
+        ],
+      ),
+    );
   }
 }
