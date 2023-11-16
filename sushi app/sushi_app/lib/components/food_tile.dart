@@ -22,7 +22,7 @@ class FoodTile extends StatelessWidget {
 
           Image.asset(
             food.imgPath,
-            height: 155,
+            height: 147,
           ),
 
           //text

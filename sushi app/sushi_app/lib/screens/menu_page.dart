@@ -149,8 +149,6 @@ class _MenuPage extends State<MenuPage> {
                     height: 60,
                   ),
 
-                  const SizedBox(height: 25),
-
                   //info
 
                   Column(
@@ -159,7 +157,7 @@ class _MenuPage extends State<MenuPage> {
                       //text
 
                       Text(
-                        "Sancocho's sushis",
+                        "Sancocho's",
                         style: GoogleFonts.dmSerifDisplay(fontSize: 25),
                       ),
 
