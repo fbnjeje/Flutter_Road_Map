@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sushi_app/components/button.dart';
 import 'package:sushi_app/components/food_tile.dart';
@@ -17,7 +16,7 @@ class MenuPage extends StatefulWidget {
 class _MenuPage extends State<MenuPage> {
   List foodMenu = [
     Food(
-        name: 'Sushi',
+        name: 'Masago',
         price: '21.00',
         imgPath: 'lib/assets/sushi.png',
         rating: '4.4'),
@@ -33,7 +32,9 @@ class _MenuPage extends State<MenuPage> {
     Navigator.push(
       context,
       MaterialPageRoute(
-        builder: (context) => FoodDetailsPage(),
+        builder: (context) => FoodDetailsPage(
+          food: foodMenu[index],
+        ),
       ),
     );
   }

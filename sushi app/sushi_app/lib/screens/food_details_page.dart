@@ -3,6 +3,7 @@ import 'package:sushi_app/models/food.dart';
 
 class FoodDetailsPage extends StatefulWidget {
   final Food food;
+
   const FoodDetailsPage({super.key, required this.food});
 
   @override
@@ -12,6 +13,8 @@ class FoodDetailsPage extends StatefulWidget {
 class _FoodDetailsPageState extends State<FoodDetailsPage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      appBar: AppBar(),
+    );
   }
 }

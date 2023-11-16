@@ -42,7 +42,7 @@ class IntroPage extends StatelessWidget {
             //title
 
             Text(
-              "THE TASTE OF JAPANISE FOOD",
+              "THE TASTE OF JAPANESE FOOD",
               style:
                   GoogleFonts.dmSerifDisplay(fontSize: 40, color: Colors.white),
             ),
