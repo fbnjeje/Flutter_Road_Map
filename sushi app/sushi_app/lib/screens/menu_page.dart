@@ -27,6 +27,11 @@ class _MenuPage extends State<MenuPage> {
         rating: '4.9'),
   ];
 
+
+//Navegate to food item details page
+void navigateToFoodDetails( int index){
+  Navigator.push(context, MaterialPageRoute(builder: (context) =>FoodDetailsPage()(index),),);
+}
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -121,6 +126,7 @@ class _MenuPage extends State<MenuPage> {
             itemCount: foodMenu.length,
             itemBuilder: (context, index) => FoodTile(
               food: foodMenu[index],
+              onTap: ,
             ),
           ),
         ),
@@ -137,6 +143,7 @@ class _MenuPage extends State<MenuPage> {
           margin: const EdgeInsets.only(left: 25, right: 25, bottom: 25),
           padding: const EdgeInsets.all(20),
           child: Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               //Guide line
