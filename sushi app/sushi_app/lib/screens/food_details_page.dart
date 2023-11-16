@@ -62,11 +62,18 @@ class _FoodDetailsPageState extends State<FoodDetailsPage> {
                   //description
 
                   Text(
-                    widget.food.description,
+                    'Description',
                     style: TextStyle(
                         color: Colors.grey[900],
                         fontWeight: FontWeight.bold,
                         fontSize: 18),
+                  ),
+                  const SizedBox(height: 25),
+
+                  Text(
+                    widget.food.description,
+                    style: TextStyle(
+                        color: Colors.grey[600], fontSize: 14, height: 2),
                   )
                 ],
               ),
