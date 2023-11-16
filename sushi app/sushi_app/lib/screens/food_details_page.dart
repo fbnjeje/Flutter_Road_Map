@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:sushi_app/models/food.dart';
 
 class FoodDetailsPage extends StatefulWidget {
@@ -52,9 +53,21 @@ class _FoodDetailsPageState extends State<FoodDetailsPage> {
                     ],
                   ),
                   //foodname
-                  Text(widget.food.name)
+                  Text(
+                    widget.food.name,
+                    style: GoogleFonts.dmSerifDisplay(fontSize: 28),
+                  ),
 
+                  const SizedBox(height: 25),
                   //description
+
+                  Text(
+                    widget.food.description,
+                    style: TextStyle(
+                        color: Colors.grey[900],
+                        fontWeight: FontWeight.bold,
+                        fontSize: 18),
+                  )
                 ],
               ),
             ))
