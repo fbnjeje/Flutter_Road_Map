@@ -149,6 +149,8 @@ class _MenuPage extends State<MenuPage> {
                     height: 60,
                   ),
 
+                  const SizedBox(width: 20),
+
                   //info
 
                   Column(
