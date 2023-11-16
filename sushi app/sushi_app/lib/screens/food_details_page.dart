@@ -21,13 +21,22 @@ class _FoodDetailsPageState extends State<FoodDetailsPage> {
         ),
         body: Column(
           children: [
-            //image
+            Expanded(
+                child: ListView(
+              children: [
+                //image
+                Image.asset(
+                  widget.food.imgPath,
+                  height: 200,
+                ),
 
-            //rating
+                //rating
 
-            //foodname
+                //foodname
 
-            //description
+                //description
+              ],
+            ))
           ],
         ));
   }
