@@ -22,31 +22,41 @@ class _FoodDetailsPageState extends State<FoodDetailsPage> {
         body: Column(
           children: [
             Expanded(
-                child: ListView(
-              children: [
-                //image
-                Image.asset(
-                  widget.food.imgPath,
-                  height: 200,
-                ),
-//space
-                const SizedBox(
-                  height: 25,
-                ),
+                child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 25),
+              child: ListView(
+                children: [
+                  //image
+                  Image.asset(
+                    widget.food.imgPath,
+                    height: 200,
+                  ),
+                  //space
+                  const SizedBox(
+                    height: 25,
+                  ),
 
-                //rating
-                Row(
-                  children: [
-                    Icon(
-                      Icons.star,
-                      color: Colors.yellow[900],
-                    )
-                  ],
-                )
-                //foodname
+                  //rating
+                  Row(
+                    children: [
+                      Icon(
+                        Icons.star,
+                        color: Colors.yellow[900],
+                      ),
+                      Text(
+                        widget.food.rating,
+                        style: TextStyle(
+                            color: Colors.grey[900],
+                            fontWeight: FontWeight.bold),
+                      )
+                    ],
+                  ),
+                  //foodname
+                  Text(widget.food.name)
 
-                //description
-              ],
+                  //description
+                ],
+              ),
             ))
           ],
         ));
