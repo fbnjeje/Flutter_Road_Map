@@ -29,9 +29,20 @@ class _FoodDetailsPageState extends State<FoodDetailsPage> {
                   widget.food.imgPath,
                   height: 200,
                 ),
+//space
+                const SizedBox(
+                  height: 25,
+                ),
 
                 //rating
-
+                Row(
+                  children: [
+                    Icon(
+                      Icons.star,
+                      color: Colors.yellow[900],
+                    )
+                  ],
+                )
                 //foodname
 
                 //description
