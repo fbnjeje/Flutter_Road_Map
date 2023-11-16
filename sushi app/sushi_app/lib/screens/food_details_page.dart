@@ -19,6 +19,8 @@ class _FoodDetailsPageState extends State<FoodDetailsPage> {
           elevation: 0,
           foregroundColor: Colors.grey[900],
         ),
-        body: Text('hola'));
+        body: Column(
+          children: [],
+        ));
   }
 }
