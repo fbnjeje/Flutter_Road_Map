@@ -20,7 +20,15 @@ class _FoodDetailsPageState extends State<FoodDetailsPage> {
           foregroundColor: Colors.grey[900],
         ),
         body: Column(
-          children: [],
+          children: [
+            //image
+
+            //rating
+
+            //foodname
+
+            //description
+          ],
         ));
   }
 }
