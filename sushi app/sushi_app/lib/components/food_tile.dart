@@ -12,7 +12,7 @@ class FoodTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: ,
+      onTap: onTap,
       child: Container(
         decoration: BoxDecoration(
             color: Colors.grey[100], borderRadius: BorderRadius.circular(20)),
