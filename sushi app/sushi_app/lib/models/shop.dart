@@ -28,5 +28,11 @@ class Shop {
   List<Food> get foodMenu => _foodMenu;
   List<Food> get cart => _cart;
 
-  JJ
+  //add to cart
+
+  void addToCart(Food foodItem, int quantity) {
+    for (int i = 0; i < quantity; i++) {
+      _cart.add(foodItem);
+    }
+  }
 }
