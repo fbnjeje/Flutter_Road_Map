@@ -85,7 +85,22 @@ class _FoodDetailsPageState extends State<FoodDetailsPage> {
 
           Container(
             color: myPrimaryColor,
-
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 25),
+              child: Column(children: [
+                Row(
+                  children: [
+                    Text(
+                      widget.food.price,
+                      style: TextStyle(
+                          fontSize: 18,
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold),
+                    )
+                  ],
+                )
+              ]),
+            ),
             //Price + quantity
 
             //add to cart
