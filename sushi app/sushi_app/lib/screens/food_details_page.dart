@@ -133,12 +133,17 @@ class _FoodDetailsPageState extends State<FoodDetailsPage> {
                             onPressed: decrementQuantity,
                           ),
                         ),
-                        Text(
-                          quantityCount.toString(),
-                          style: TextStyle(
-                              fontSize: 18,
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold),
+                        SizedBox(
+                          width: 40,
+                          child: Center(
+                            child: Text(
+                              quantityCount.toString(),
+                              style: TextStyle(
+                                  fontSize: 18,
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                          ),
                         ),
 
                         //quantity count
