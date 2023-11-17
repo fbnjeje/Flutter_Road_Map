@@ -14,12 +14,22 @@ class FoodDetailsPage extends StatefulWidget {
 
 class _FoodDetailsPageState extends State<FoodDetailsPage> {
   //quantity
+  int quantityCount = 0;
 
   //decrement quantity
 
-  //increment quantity
+  void decrementQuantity() {
+    setState(() {
+      quantityCount--;
+    });
+  }
 
-  int quantityCount = 0;
+  //increment quantity
+  void incrementQuantity() {
+    setState(() {
+      quantityCount++;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -111,8 +121,8 @@ class _FoodDetailsPageState extends State<FoodDetailsPage> {
                       children: [
                         Container(
                           child: IconButton(
-                            icon: Icons(Icons.remove),
-                            onPressed: decrementQuantity(),
+                            icon: Icon(Icons.remove),
+                            onPressed: decrementQuantity,
                           ),
                         )
                         //quantity count
