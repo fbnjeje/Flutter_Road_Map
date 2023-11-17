@@ -1,6 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:sushi_app/components/button.dart';
 import 'package:sushi_app/models/food.dart';
 import 'package:sushi_app/theme/colors.dart';
 
@@ -32,6 +33,7 @@ class _FoodDetailsPageState extends State<FoodDetailsPage> {
     });
   }
 
+  void addToCart() {}
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -106,70 +108,79 @@ class _FoodDetailsPageState extends State<FoodDetailsPage> {
             color: myPrimaryColor,
             child: Padding(
               padding: const EdgeInsets.all(25),
-              child: Column(children: [
-                //Price + quantity
-                Row(
-                  children: [
-                    //prince
-                    Text(
-                      widget.food.price,
-                      style: TextStyle(
-                          fontSize: 18,
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold),
-                    ),
-                    Row(
-                      children: [
-                        //TODO REMOVE OBJECT COUNT
+              child: Column(
+                children: [
+                  //Price + quantity
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      //prince
+                      Text(
+                        widget.food.price,
+                        style: TextStyle(
+                            fontSize: 18,
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold),
+                      ),
+                      Row(
+                        children: [
+                          //TODO REMOVE OBJECT COUNT
 
-                        Container(
-                          decoration: BoxDecoration(
-                              color: mySecondaryColor, shape: BoxShape.circle),
-                          child: IconButton(
-                            icon: Icon(
-                              Icons.remove,
-                              color: Colors.white,
-                            ),
-                            onPressed: decrementQuantity,
-                          ),
-                        ),
-                        SizedBox(
-                          width: 40,
-                          child: Center(
-                            child: Text(
-                              quantityCount.toString(),
-                              style: TextStyle(
-                                  fontSize: 18,
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold),
+                          Container(
+                            decoration: BoxDecoration(
+                                color: mySecondaryColor,
+                                shape: BoxShape.circle),
+                            child: IconButton(
+                              icon: Icon(
+                                Icons.remove,
+                                color: Colors.white,
+                              ),
+                              onPressed: decrementQuantity,
                             ),
                           ),
-                        ),
-
-                        //quantity count
-                        //TODO ADD OBJECT COUNT
-
-                        Container(
-                          decoration: BoxDecoration(
-                              color: mySecondaryColor, shape: BoxShape.circle),
-                          child: IconButton(
-                            icon: Icon(
-                              Icons.add,
-                              color: Colors.white,
+                          SizedBox(
+                            width: 40,
+                            child: Center(
+                              child: Text(
+                                quantityCount.toString(),
+                                style: TextStyle(
+                                    fontSize: 18,
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold),
+                              ),
                             ),
-                            onPressed: incrementQuantity,
                           ),
-                        )
 
-                        //plus buttons
-                      ],
-                    )
-                  ],
-                )
-              ]),
+                          //quantity count
+                          //TODO ADD OBJECT COUNT
+
+                          Container(
+                            decoration: BoxDecoration(
+                                color: mySecondaryColor,
+                                shape: BoxShape.circle),
+                            child: IconButton(
+                              icon: Icon(
+                                Icons.add,
+                                color: Colors.white,
+                              ),
+                              onPressed: incrementQuantity,
+                            ),
+                          )
+
+                          //plus buttons
+                        ],
+                      )
+                    ],
+                  ),
+                  const SizedBox(height: 25),
+                  //add to cart
+                  MyButton(
+                    text: 'Add to cart',
+                    onTap: () => addToCart,
+                  )
+                ],
+              ),
             ),
-
-            //add to cart
           )
         ],
       ),
