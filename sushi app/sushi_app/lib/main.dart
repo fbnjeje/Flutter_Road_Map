@@ -1,8 +1,18 @@
+import 'dart:js';
+
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:sushi_app/models/shop.dart';
 import 'package:sushi_app/screens/intro_page.dart';
 import 'package:sushi_app/screens/menu_page.dart';
 
-void main() => runApp(const MyApp());
+void main() {
+  runApp(ChangeNotifierProvider(
+    create: (context) => Shop(),
+    child: const MyApp(),
+  ) //
+      );
+}
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
