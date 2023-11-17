@@ -13,6 +13,14 @@ class FoodDetailsPage extends StatefulWidget {
 }
 
 class _FoodDetailsPageState extends State<FoodDetailsPage> {
+  //quantity
+
+  //decrement quantity
+
+  //increment quantity
+
+  int quantityCount = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -86,22 +94,36 @@ class _FoodDetailsPageState extends State<FoodDetailsPage> {
           Container(
             color: myPrimaryColor,
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 25),
+              padding: const EdgeInsets.all(25),
               child: Column(children: [
+                //Price + quantity
                 Row(
                   children: [
+                    //prince
                     Text(
                       widget.food.price,
                       style: TextStyle(
                           fontSize: 18,
                           color: Colors.white,
                           fontWeight: FontWeight.bold),
+                    ),
+                    Row(
+                      children: [
+                        Container(
+                          child: IconButton(
+                            icon: Icons(Icons.remove),
+                            onPressed: decrementQuantity(),
+                          ),
+                        )
+                        //quantity count
+
+                        //plus buttons
+                      ],
                     )
                   ],
                 )
               ]),
             ),
-            //Price + quantity
 
             //add to cart
           )
