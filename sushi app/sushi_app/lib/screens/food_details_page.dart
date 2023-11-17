@@ -22,7 +22,9 @@ class _FoodDetailsPageState extends State<FoodDetailsPage> {
 
   void decrementQuantity() {
     setState(() {
-      quantityCount--;
+      if (quantityCount > 0) {
+        quantityCount--;
+      }
     });
   }
 
@@ -117,7 +119,7 @@ class _FoodDetailsPageState extends State<FoodDetailsPage> {
                       //prince
                       Text(
                         widget.food.price,
-                        style: TextStyle(
+                        style: const TextStyle(
                             fontSize: 18,
                             color: Colors.white,
                             fontWeight: FontWeight.bold),
@@ -131,7 +133,7 @@ class _FoodDetailsPageState extends State<FoodDetailsPage> {
                                 color: mySecondaryColor,
                                 shape: BoxShape.circle),
                             child: IconButton(
-                              icon: Icon(
+                              icon: const Icon(
                                 Icons.remove,
                                 color: Colors.white,
                               ),
@@ -143,7 +145,7 @@ class _FoodDetailsPageState extends State<FoodDetailsPage> {
                             child: Center(
                               child: Text(
                                 quantityCount.toString(),
-                                style: TextStyle(
+                                style: const TextStyle(
                                     fontSize: 18,
                                     color: Colors.white,
                                     fontWeight: FontWeight.bold),
@@ -159,7 +161,7 @@ class _FoodDetailsPageState extends State<FoodDetailsPage> {
                                 color: mySecondaryColor,
                                 shape: BoxShape.circle),
                             child: IconButton(
-                              icon: Icon(
+                              icon: const Icon(
                                 Icons.add,
                                 color: Colors.white,
                               ),
