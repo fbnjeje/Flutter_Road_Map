@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sushi_app/models/food.dart';
@@ -119,6 +120,8 @@ class _FoodDetailsPageState extends State<FoodDetailsPage> {
                     ),
                     Row(
                       children: [
+                        //TODO REMOVE OBJECT COUNT
+
                         Container(
                           decoration: BoxDecoration(
                               color: mySecondaryColor, shape: BoxShape.circle),
@@ -129,8 +132,29 @@ class _FoodDetailsPageState extends State<FoodDetailsPage> {
                             ),
                             onPressed: decrementQuantity,
                           ),
-                        )
+                        ),
+                        Text(
+                          quantityCount.toString(),
+                          style: TextStyle(
+                              fontSize: 18,
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold),
+                        ),
+
                         //quantity count
+                        //TODO ADD OBJECT COUNT
+
+                        Container(
+                          decoration: BoxDecoration(
+                              color: mySecondaryColor, shape: BoxShape.circle),
+                          child: IconButton(
+                            icon: Icon(
+                              Icons.add,
+                              color: Colors.white,
+                            ),
+                            onPressed: incrementQuantity,
+                          ),
+                        )
 
                         //plus buttons
                       ],
