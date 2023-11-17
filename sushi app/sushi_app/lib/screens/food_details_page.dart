@@ -120,8 +120,13 @@ class _FoodDetailsPageState extends State<FoodDetailsPage> {
                     Row(
                       children: [
                         Container(
+                          decoration: BoxDecoration(
+                              color: mySecondaryColor, shape: BoxShape.circle),
                           child: IconButton(
-                            icon: Icon(Icons.remove),
+                            icon: Icon(
+                              Icons.remove,
+                              color: Colors.white,
+                            ),
                             onPressed: decrementQuantity,
                           ),
                         )
