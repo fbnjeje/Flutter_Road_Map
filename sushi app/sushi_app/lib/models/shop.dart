@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:sushi_app/models/food.dart';
 
 class Shop {
-  final List<Food> foodMenu = [
+  final List<Food> _foodMenu = [
     Food(
         name: 'Masago',
         price: '21.00',
@@ -18,4 +18,15 @@ class Shop {
         description:
             ' Tunas are elongated, robust, and streamlined fishes; they have a rounded body that tapers to a slender tail base and a forked or crescent-shaped tail. In colour, tunas are generally dark above and silvery below, often with an iridescent shine.'),
   ];
+
+  //customer cart
+
+  List<Food> _cart = [];
+
+  //getter methods
+
+  List<Food> get foodMenu => _foodMenu;
+  List<Food> get cart => _cart;
+
+  JJ
 }
