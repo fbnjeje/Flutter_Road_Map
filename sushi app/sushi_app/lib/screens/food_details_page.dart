@@ -47,7 +47,7 @@ class _FoodDetailsPageState extends State<FoodDetailsPage> {
 
       showDialog(
         context: context,
-        builder: (context) => AlertDialog(
+        builder: (context) => const AlertDialog(
           content: Text('added sucessfully'),
         ),
       );
