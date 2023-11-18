@@ -1,8 +1,10 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'package:sushi_app/components/button.dart';
 import 'package:sushi_app/models/food.dart';
+import 'package:sushi_app/models/shop.dart';
 import 'package:sushi_app/theme/colors.dart';
 
 class FoodDetailsPage extends StatefulWidget {
@@ -35,7 +37,23 @@ class _FoodDetailsPageState extends State<FoodDetailsPage> {
     });
   }
 
-  void addToCart() {}
+  void addToCart() {
+    if (quantityCount > 0) {
+      //get access
+      final shop = context.read<Shop>();
+      //add to cart
+      shop.addToCart(widget.food, quantityCount);
+      //return to the previous page
+
+      showDialog(
+        context: context,
+        builder: (context) => AlertDialog(
+          content: Text('added sucessfully'),
+        ),
+      );
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
