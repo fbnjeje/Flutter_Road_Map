@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'package:sushi_app/components/button.dart';
 import 'package:sushi_app/components/food_tile.dart';
-import 'package:sushi_app/models/food.dart';
+import 'package:sushi_app/models/shop.dart';
 import 'package:sushi_app/screens/food_details_page.dart';
 import 'package:sushi_app/theme/Colors.dart';
 
@@ -14,25 +15,12 @@ class MenuPage extends StatefulWidget {
 }
 
 class _MenuPage extends State<MenuPage> {
-  List foodMenu = [
-    Food(
-        name: 'Masago',
-        price: '21.00',
-        imgPath: 'lib/assets/sushi.png',
-        rating: '4.4',
-        description:
-            "Are the edible eggs of the capelin fish (Mallotus villosus), which belong to the smelt family. They're considered a forage fish, meaning they're an important food source for larger predators, such as codfish, seabirds, seals, and whales."),
-    Food(
-        name: 'Tuna',
-        price: '15.00',
-        imgPath: 'lib/assets/uramaki.png',
-        rating: '4.9',
-        description:
-            ' Tunas are elongated, robust, and streamlined fishes; they have a rounded body that tapers to a slender tail base and a forked or crescent-shaped tail. In colour, tunas are generally dark above and silvery below, often with an iridescent shine.'),
-  ];
-
-//Navegate to food item details page
   void navigateToFoodDetails(int index) {
+//get the shop and its menu
+
+    final shop = context.read<Shop>();
+    final foodMenu = shop.foodMenu;
+
     Navigator.push(
       context,
       MaterialPageRoute(
@@ -45,6 +33,9 @@ class _MenuPage extends State<MenuPage> {
 
   @override
   Widget build(BuildContext context) {
+    final shop = context.read<Shop>();
+    final foodMenu = shop.foodMenu;
+
     return Scaffold(
       backgroundColor: Colors.grey[300],
       appBar: AppBar(
