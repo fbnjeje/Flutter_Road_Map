@@ -37,9 +37,11 @@ class _FoodDetailsPageState extends State<FoodDetailsPage> {
     });
   }
 
+// add to cart
   void addToCart() {
+    //only add cart if there is something in the cart
     if (quantityCount > 0) {
-      //get access
+      //get access to shop
       final shop = context.read<Shop>();
       //add to cart
       shop.addToCart(widget.food, quantityCount);
@@ -196,7 +198,7 @@ class _FoodDetailsPageState extends State<FoodDetailsPage> {
                   //add to cart
                   MyButton(
                     text: 'Add to cart',
-                    onTap: () => addToCart,
+                    onTap: addToCart,
                   )
                 ],
               ),
