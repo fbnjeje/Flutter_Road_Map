@@ -49,8 +49,20 @@ class _FoodDetailsPageState extends State<FoodDetailsPage> {
 
       showDialog(
         context: context,
-        builder: (context) => const AlertDialog(
-          content: Text('added sucessfully'),
+        barrierDismissible: false,
+        builder: (context) => AlertDialog(
+          content: const Text('Sucessfully added to cart'),
+          actions: [
+            IconButton(
+                onPressed: () {
+                  //pop to remove dialog text
+                  Navigator.pop(context);
+                  //pop back to menu page
+
+                  Navigator.pop(context);
+                },
+                icon: const Icon(Icons.done))
+          ],
         ),
       );
     }
