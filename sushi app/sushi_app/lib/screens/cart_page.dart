@@ -7,31 +7,63 @@ import 'package:sushi_app/theme/colors.dart';
 class CartPage extends StatelessWidget {
   const CartPage({super.key});
 
+  removeFromCart() {}
+
   @override
   Widget build(BuildContext context) {
     return Consumer<Shop>(
       builder: (context, value, child) => Scaffold(
+        backgroundColor: myPrimaryColor,
         appBar: AppBar(
           title: const Text('Cart Shop Section'),
           backgroundColor: myPrimaryColor,
+          elevation: 0,
         ),
-        body: ListView.builder(
-          itemCount: value.cart.length,
-          itemBuilder: (context, index) {
-            //get food from cart
-            final Food food = value.cart[index];
-            //get name
-            final String foodName = food.name;
+        body: Column(
+          children: [
+            //CUSTOMER CART
 
-            //get food price
-            final String price = food.price;
-            //return list title
+            ListView.builder(
+              itemCount: value.cart.length,
+              itemBuilder: (context, index) {
+                //get food from cart
+                final Food food = value.cart[index];
+                //get name
+                final String foodName = food.name;
 
-            return ListTile(
-              title: Text(foodName),
-              subtitle: Text(price),
-            );
-          },
+                //get food price
+                final String price = food.price;
+                //return list title
+
+                return Container(
+                  decoration: BoxDecoration(
+                      color: mySecondaryColor,
+                      borderRadius: BorderRadius.circular(20)),
+                  margin: EdgeInsets.only(left: 20, top: 20, right: 20),
+                  child: ListTile(
+                    title: Text(
+                      foodName,
+                      style: TextStyle(
+                          color: Colors.white, fontWeight: FontWeight.bold),
+                    ),
+                    subtitle: Text(
+                      price,
+                      style: TextStyle(
+                          color: Colors.grey[200], fontWeight: FontWeight.bold),
+                    ),
+                    trailing: IconButton(
+                      icon: Icon(
+                        Icons.delete,
+                        color: Colors.grey[200],
+                      ),
+                      onPressed: removeFromCart,
+                    ),
+                  ),
+                );
+              },
+            ),
+            //PAY BUTTON
+          ],
         ),
       ),
     );
