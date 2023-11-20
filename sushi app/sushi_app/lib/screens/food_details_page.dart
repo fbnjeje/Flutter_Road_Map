@@ -51,7 +51,14 @@ class _FoodDetailsPageState extends State<FoodDetailsPage> {
         context: context,
         barrierDismissible: false,
         builder: (context) => AlertDialog(
-          content: const Text('Sucessfully added to cart'),
+          backgroundColor: myPrimaryColor,
+          content: const Text(
+            'Sucessfully added to cart',
+            style: TextStyle(
+              color: Colors.white,
+            ),
+            textAlign: TextAlign.center,
+          ),
           actions: [
             IconButton(
                 onPressed: () {
@@ -61,7 +68,10 @@ class _FoodDetailsPageState extends State<FoodDetailsPage> {
 
                   Navigator.pop(context);
                 },
-                icon: const Icon(Icons.done))
+                icon: const Icon(
+                  Icons.done,
+                  color: Colors.white,
+                ))
           ],
         ),
       );
