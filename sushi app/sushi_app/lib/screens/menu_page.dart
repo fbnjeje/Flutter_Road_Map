@@ -40,24 +40,16 @@ class _MenuPage extends State<MenuPage> {
       backgroundColor: Colors.grey[300],
       appBar: AppBar(
         backgroundColor: Colors.transparent,
+        foregroundColor: Colors.grey[900],
         elevation: 0,
-        leading: Icon(
-          Icons.menu,
-          color: Colors.grey[900],
-        ),
-        title: Text(
-          'Nagano',
-          style: TextStyle(color: Colors.grey[900]),
-        ),
+        leading: const Icon(Icons.menu),
+        title: const Text('Nagano'),
         actions: [
           IconButton(
               onPressed: () {
                 Navigator.pushNamed(context, '/cartpage');
               },
-              icon: Icon(
-                Icons.shopping_cart,
-                color: Colors.grey[900],
-              ))
+              icon: const Icon(Icons.shopping_cart))
         ],
       ),
       body: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
