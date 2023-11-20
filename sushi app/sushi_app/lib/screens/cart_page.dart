@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:sushi_app/components/button.dart';
 import 'package:sushi_app/models/food.dart';
 import 'package:sushi_app/models/shop.dart';
 import 'package:sushi_app/theme/colors.dart';
@@ -7,7 +8,7 @@ import 'package:sushi_app/theme/colors.dart';
 class CartPage extends StatelessWidget {
   const CartPage({super.key});
 
-  removeFromCart() {}
+  removeFromCart(Food food) {}
 
   @override
   Widget build(BuildContext context) {
@@ -23,46 +24,54 @@ class CartPage extends StatelessWidget {
           children: [
             //CUSTOMER CART
 
-            ListView.builder(
-              itemCount: value.cart.length,
-              itemBuilder: (context, index) {
-                //get food from cart
-                final Food food = value.cart[index];
-                //get name
-                final String foodName = food.name;
+            Expanded(
+              child: ListView.builder(
+                itemCount: value.cart.length,
+                itemBuilder: (context, index) {
+                  //get food from cart
+                  final Food food = value.cart[index];
+                  //get name
+                  final String foodName = food.name;
 
-                //get food price
-                final String price = food.price;
-                //return list title
+                  //get food price
+                  final String price = food.price;
+                  //return list title
 
-                return Container(
-                  decoration: BoxDecoration(
-                      color: mySecondaryColor,
-                      borderRadius: BorderRadius.circular(20)),
-                  margin: EdgeInsets.only(left: 20, top: 20, right: 20),
-                  child: ListTile(
-                    title: Text(
-                      foodName,
-                      style: TextStyle(
-                          color: Colors.white, fontWeight: FontWeight.bold),
-                    ),
-                    subtitle: Text(
-                      price,
-                      style: TextStyle(
-                          color: Colors.grey[200], fontWeight: FontWeight.bold),
-                    ),
-                    trailing: IconButton(
-                      icon: Icon(
-                        Icons.delete,
-                        color: Colors.grey[200],
+                  return Container(
+                    decoration: BoxDecoration(
+                        color: mySecondaryColor,
+                        borderRadius: BorderRadius.circular(20)),
+                    margin: EdgeInsets.only(left: 20, top: 20, right: 20),
+                    child: ListTile(
+                      title: Text(
+                        foodName,
+                        style: TextStyle(
+                            color: Colors.white, fontWeight: FontWeight.bold),
                       ),
-                      onPressed: removeFromCart,
+                      subtitle: Text(
+                        price,
+                        style: TextStyle(
+                            color: Colors.grey[200],
+                            fontWeight: FontWeight.bold),
+                      ),
+                      trailing: IconButton(
+                        icon: Icon(
+                          Icons.delete,
+                          color: Colors.grey[200],
+                        ),
+                        onPressed: () => removeFromCart(food),
+                      ),
                     ),
-                  ),
-                );
-              },
+                  );
+                },
+              ),
             ),
             //PAY BUTTON
+
+            Padding(
+              padding: const EdgeInsets.all(25.0),
+              child: MyButton(text: 'Pay now!', onTap: () {}),
+            )
           ],
         ),
       ),
