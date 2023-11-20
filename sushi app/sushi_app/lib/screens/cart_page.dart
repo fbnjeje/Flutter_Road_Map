@@ -8,7 +8,14 @@ import 'package:sushi_app/theme/colors.dart';
 class CartPage extends StatelessWidget {
   const CartPage({super.key});
 
-  removeFromCart(Food food) {}
+  removeFromCart(Food food, BuildContext context) {
+    // get Access
+    final shop = context.read<Shop>();
+
+    // delete food item
+
+    shop.removeFromCart(food);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -59,7 +66,7 @@ class CartPage extends StatelessWidget {
                           Icons.delete,
                           color: Colors.grey[200],
                         ),
-                        onPressed: () => removeFromCart(food),
+                        onPressed: () => removeFromCart(food, context),
                       ),
                     ),
                   );
