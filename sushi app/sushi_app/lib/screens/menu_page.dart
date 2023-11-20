@@ -49,7 +49,16 @@ class _MenuPage extends State<MenuPage> {
           'Nagano',
           style: TextStyle(color: Colors.grey[900]),
         ),
-        actions: [const Icon(Icons.shopping_cart)],
+        actions: [
+          IconButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/cartpage');
+              },
+              icon: Icon(
+                Icons.shopping_cart,
+                color: Colors.grey[900],
+              ))
+        ],
       ),
       body: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
         //promo banner
