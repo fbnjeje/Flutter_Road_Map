@@ -73,7 +73,7 @@ class _MenuPage extends State<MenuPage> {
                   ],
                 )),
             ListTile(
-              title: const Text('Cart'),
+              title: const Text('Carrito'),
               onTap: () {
                 // Update the state of the app
                 // Then close the drawer
@@ -81,7 +81,7 @@ class _MenuPage extends State<MenuPage> {
               },
             ),
             ListTile(
-              title: const Text('Back'),
+              title: const Text('Volver'),
               onTap: () {
                 // Update the state of the app
                 // Then close the drawer
@@ -89,7 +89,7 @@ class _MenuPage extends State<MenuPage> {
               },
             ),
             ListTile(
-              title: const Text('IntroPage'),
+              title: const Text('Inicio'),
               onTap: () {
                 // Update the state of the app
                 // Then close the drawer
@@ -116,14 +116,14 @@ class _MenuPage extends State<MenuPage> {
                 children: [
                   //reedem button
                   Text(
-                    'Get a 32% Promo',
+                    'Obten 32% desc',
                     style: GoogleFonts.dmSerifDisplay(
                         fontSize: 25, color: Colors.white),
                   ),
 
                   const SizedBox(height: 20),
 
-                  MyButton(text: 'Redeem', onTap: () {})
+                  MyButton(text: 'Redimir', onTap: () {})
                 ],
               ),
               //image
@@ -150,7 +150,7 @@ class _MenuPage extends State<MenuPage> {
                 enabledBorder: OutlineInputBorder(
                     borderSide: BorderSide(color: myPrimaryColor),
                     borderRadius: BorderRadius.circular(20)),
-                hintText: 'Search Here...'),
+                hintText: 'Busca acá.'),
           ),
         ),
 
@@ -160,7 +160,7 @@ class _MenuPage extends State<MenuPage> {
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 0),
           child: Text(
-            'Food Menu',
+            'Menu de Comidas',
             style: TextStyle(
                 fontSize: 29,
                 fontWeight: FontWeight.w900,
@@ -217,7 +217,7 @@ class _MenuPage extends State<MenuPage> {
                       //text
 
                       Text(
-                        "Sancocho's",
+                        "Sancocho",
                         style: GoogleFonts.dmSerifDisplay(fontSize: 25),
                       ),
 

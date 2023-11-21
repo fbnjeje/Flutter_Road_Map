@@ -53,7 +53,7 @@ class _FoodDetailsPageState extends State<FoodDetailsPage> {
         builder: (context) => AlertDialog(
           backgroundColor: myPrimaryColor,
           content: const Text(
-            'Sucessfully added to cart',
+            'Agregado satisfactoriamente al carrito!',
             style: TextStyle(
               color: Colors.white,
             ),
@@ -128,7 +128,7 @@ class _FoodDetailsPageState extends State<FoodDetailsPage> {
                   //description
 
                   Text(
-                    'Description',
+                    'Descripcion',
                     style: TextStyle(
                         color: Colors.grey[900],
                         fontWeight: FontWeight.bold,
@@ -219,7 +219,7 @@ class _FoodDetailsPageState extends State<FoodDetailsPage> {
                   const SizedBox(height: 25),
                   //add to cart
                   MyButton(
-                    text: 'Add to cart',
+                    text: 'Añadir al carrito',
                     onTap: addToCart,
                   )
                 ],

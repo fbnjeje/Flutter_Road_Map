@@ -23,7 +23,7 @@ class CartPage extends StatelessWidget {
       builder: (context, value, child) => Scaffold(
         backgroundColor: myPrimaryColor,
         appBar: AppBar(
-          title: const Text('Cart Shop Section'),
+          title: const Text('Carrito de compras'),
           backgroundColor: myPrimaryColor,
           elevation: 0,
         ),
@@ -77,7 +77,7 @@ class CartPage extends StatelessWidget {
 
             Padding(
               padding: const EdgeInsets.all(25.0),
-              child: MyButton(text: 'Pay now!', onTap: () {}),
+              child: MyButton(text: 'Paga ahora!', onTap: () {}),
             )
           ],
         ),

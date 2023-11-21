@@ -23,7 +23,7 @@ class IntroPage extends StatelessWidget {
             //shop Name
 
             Text(
-              "KYOTO'S SUSHI",
+              "KYOTO SUSHI TIENDA",
               style:
                   GoogleFonts.dmSerifDisplay(fontSize: 28, color: Colors.white),
             ),
