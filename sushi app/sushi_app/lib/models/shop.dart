@@ -20,17 +20,17 @@ class Shop extends ChangeNotifier {
 
     //new
     Food(
-        name: 'Tuna',
+        name: 'T1 Salmon',
         price: '15.00',
-        imgPath: 'lib/assets/uramaki.png',
+        imgPath: 'lib/assets/Salmon.png',
         rating: '4.9',
         description:
             ' Tunas are elongated, robust, and streamlined fishes; they have a rounded body that tapers to a slender tail base and a forked or crescent-shaped tail. In colour, tunas are generally dark above and silvery below, often with an iridescent shine.'),
     //secondone
     Food(
-        name: 'Tuna',
+        name: 'Palmitos',
         price: '15.00',
-        imgPath: 'lib/assets/uramaki.png',
+        imgPath: 'lib/assets/Cal.png',
         rating: '4.9',
         description:
             ' Tunas are elongated, robust, and streamlined fishes; they have a rounded body that tapers to a slender tail base and a forked or crescent-shaped tail. In colour, tunas are generally dark above and silvery below, often with an iridescent shine.'),
