@@ -48,11 +48,11 @@ class CartPage extends StatelessWidget {
                     decoration: BoxDecoration(
                         color: mySecondaryColor,
                         borderRadius: BorderRadius.circular(20)),
-                    margin: EdgeInsets.only(left: 20, top: 20, right: 20),
+                    margin: const EdgeInsets.only(left: 20, top: 20, right: 20),
                     child: ListTile(
                       title: Text(
                         foodName,
-                        style: TextStyle(
+                        style: const TextStyle(
                             color: Colors.white, fontWeight: FontWeight.bold),
                       ),
                       subtitle: Text(

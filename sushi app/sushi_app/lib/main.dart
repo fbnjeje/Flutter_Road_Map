@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:sushi_app/models/shop.dart';
 import 'package:sushi_app/screens/cart_page.dart';
+import 'package:sushi_app/screens/food_details_page.dart';
 import 'package:sushi_app/screens/intro_page.dart';
 import 'package:sushi_app/screens/menu_page.dart';
 
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/intropage': (context) => const IntroPage(),
         '/menupage': (context) => const MenuPage(),
-        '/cartpage': (context) => const CartPage()
+        '/cartpage': (context) => const CartPage(),
       },
     );
   }

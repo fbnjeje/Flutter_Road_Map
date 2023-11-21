@@ -42,7 +42,7 @@ class IntroPage extends StatelessWidget {
             //title
 
             Text(
-              "THE TASTE OF JAPANESE FOOD",
+              "EL SABOR DE LA COMIDA JAPONESA",
               style:
                   GoogleFonts.dmSerifDisplay(fontSize: 40, color: Colors.white),
             ),
@@ -54,7 +54,7 @@ class IntroPage extends StatelessWidget {
             //subtitle
 
             Text(
-              "Feel the taste of the most popular Japanese food from anywhere and anytime",
+              "Siente el sabor de la comida japonesa más popular desde cualquier lugar y en cualquier momento",
               style: TextStyle(color: Colors.grey[300], height: 2),
             ),
 
@@ -65,7 +65,7 @@ class IntroPage extends StatelessWidget {
             //getStarted button
 
             MyButton(
-              text: "Get Started",
+              text: "Empieza ahora",
               onTap: () {
                 //go to next page
                 Navigator.pushNamed(context, '/menupage');

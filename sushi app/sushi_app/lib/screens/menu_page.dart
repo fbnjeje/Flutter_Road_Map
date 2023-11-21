@@ -42,7 +42,6 @@ class _MenuPage extends State<MenuPage> {
         backgroundColor: Colors.transparent,
         foregroundColor: Colors.grey[900],
         elevation: 0,
-        leading: const Icon(Icons.menu),
         title: const Text('Nagano'),
         actions: [
           IconButton(
@@ -51,6 +50,54 @@ class _MenuPage extends State<MenuPage> {
               },
               icon: const Icon(Icons.shopping_cart))
         ],
+      ),
+      drawer: Drawer(
+        // Add a ListView to the drawer. This ensures the user can scroll
+        // through the options in the drawer if there isn't enough vertical
+        // space to fit everything.
+        child: ListView(
+          // Important: Remove any padding from the ListView.
+          padding: EdgeInsets.zero,
+          children: [
+            DrawerHeader(
+                decoration: BoxDecoration(
+                  color: myPrimaryColor,
+                ),
+                child: Column(
+                  children: [
+                    const Text(
+                      'Navega con nosotros',
+                      style: TextStyle(fontSize: 18),
+                    ),
+                    Image.asset('lib/assets/sushi.png', height: 110)
+                  ],
+                )),
+            ListTile(
+              title: const Text('Cart'),
+              onTap: () {
+                // Update the state of the app
+                // Then close the drawer
+                Navigator.pushNamed(context, '/cartpage');
+              },
+            ),
+            ListTile(
+              title: const Text('Back'),
+              onTap: () {
+                // Update the state of the app
+                // Then close the drawer
+                Navigator.pushNamed(context, '/intropage');
+              },
+            ),
+            ListTile(
+              title: const Text('IntroPage'),
+              onTap: () {
+                // Update the state of the app
+                // Then close the drawer
+                Navigator.pushNamed(context, '/menupage');
+              },
+            ),
+          ],
+        ),
       ),
       body: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
         //promo banner
@@ -187,7 +234,7 @@ class _MenuPage extends State<MenuPage> {
                 ],
               ),
 
-              //heart Icon
+              // //heart Icon
               const Icon(
                 Icons.favorite_outline,
                 color: Colors.grey,
