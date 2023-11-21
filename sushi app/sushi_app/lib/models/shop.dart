@@ -17,6 +17,23 @@ class Shop extends ChangeNotifier {
         rating: '4.9',
         description:
             ' Tunas are elongated, robust, and streamlined fishes; they have a rounded body that tapers to a slender tail base and a forked or crescent-shaped tail. In colour, tunas are generally dark above and silvery below, often with an iridescent shine.'),
+
+    //new
+    Food(
+        name: 'Tuna',
+        price: '15.00',
+        imgPath: 'lib/assets/uramaki.png',
+        rating: '4.9',
+        description:
+            ' Tunas are elongated, robust, and streamlined fishes; they have a rounded body that tapers to a slender tail base and a forked or crescent-shaped tail. In colour, tunas are generally dark above and silvery below, often with an iridescent shine.'),
+    //secondone
+    Food(
+        name: 'Tuna',
+        price: '15.00',
+        imgPath: 'lib/assets/uramaki.png',
+        rating: '4.9',
+        description:
+            ' Tunas are elongated, robust, and streamlined fishes; they have a rounded body that tapers to a slender tail base and a forked or crescent-shaped tail. In colour, tunas are generally dark above and silvery below, often with an iridescent shine.'),
   ];
 
   //customer cart
