@@ -9,31 +9,31 @@ class Shop extends ChangeNotifier {
         imgPath: 'lib/assets/sushi.png',
         rating: '4.4',
         description:
-            "Are the edible eggs of the capelin fish (Mallotus villosus), which belong to the smelt family. They're considered a forage fish, meaning they're an important food source for larger predators, such as codfish, seabirds, seals, and whales."),
+            "Esta hueva de pez capelán, de color anaranjado y de tamaño pequeño si las comparamos con las tobiko y las ikura, llaman la atención del paladar por el regusto amargo. Son más económicas que las tobiko y su uso suele estar más extendido en Japón."),
     Food(
         name: 'Tuna',
         price: '15.00',
         imgPath: 'lib/assets/uramaki.png',
         rating: '4.9',
         description:
-            ' Tunas are elongated, robust, and streamlined fishes; they have a rounded body that tapers to a slender tail base and a forked or crescent-shaped tail. In colour, tunas are generally dark above and silvery below, often with an iridescent shine.'),
+            'Los atunes son peces alargados, robustos y aerodinámicos, tienen un cuerpo redondeado que se estrecha hasta una base de cola delgada y una cola bifurcada o en forma de media luna. En color, los atunes son generalmente oscuros por arriba y plateados por debajo, a menudo con un brillo iridiscente.'),
 
     //new
     Food(
-        name: 'T1 Salmon',
-        price: '15.00',
+        name: 'Nigiri',
+        price: '27.00',
         imgPath: 'lib/assets/Salmon.png',
-        rating: '4.9',
+        rating: '4.6',
         description:
-            ' Tunas are elongated, robust, and streamlined fishes; they have a rounded body that tapers to a slender tail base and a forked or crescent-shaped tail. In colour, tunas are generally dark above and silvery below, often with an iridescent shine.'),
+            'Después del atún, el de salmón es posiblemente el sushi más popular y conocido dentro y fuera de Japón. Pero lo curioso del asunto es que se trata de una variedad relativamente nueva que no surgió hasta los años 90. '),
     //secondone
     Food(
         name: 'Palmitos',
-        price: '15.00',
+        price: '9.00',
         imgPath: 'lib/assets/Cal.png',
-        rating: '4.9',
+        rating: '4.2',
         description:
-            ' Tunas are elongated, robust, and streamlined fishes; they have a rounded body that tapers to a slender tail base and a forked or crescent-shaped tail. In colour, tunas are generally dark above and silvery below, often with an iridescent shine.'),
+            'Sushi (鮨, 鮓, 寿司 o 壽司) es un plato típico de origen japonés basado en arroz aderezado con vinagre de arroz, azúcar y sal y combinado con otros ingredientes como pescados crudos, mariscos, verduras, etc. Este plato es uno de los más reconocidos de la gastronomía japonesa y uno de los más populares internacionalmente.'),
   ];
 
   //customer cart
