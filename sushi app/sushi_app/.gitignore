@@ -42,3 +42,8 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+
+# ignore key secret proyect
+
+/lib/theme/firebase_options.dart
