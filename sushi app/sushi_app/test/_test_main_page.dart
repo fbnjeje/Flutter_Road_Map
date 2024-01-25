@@ -1,11 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:sushi_app/main.dart';
-import 'package:sushi_app/models/food.dart';
-import 'package:sushi_app/models/shop.dart';
-import 'package:sushi_app/screens/food_details_page.dart';
-
-import 'package:sushi_app/screens/food_details_page.dart';
 
 void main() {
   testWidgets('test opening first page', (WidgetTester tester) async {

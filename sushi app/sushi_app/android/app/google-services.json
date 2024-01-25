@@ -12,7 +12,20 @@
           "package_name": "com.example.sushi_app"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "109650028736-j2efaacb6tjh08r7getvk85pmkjdb53j.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.sushi_app",
+            "certificate_hash": "232ee5a0422f9f846b0d4bf5bfa1ff58bf8228ba"
+          }
+        },
+        {
+          "client_id": "109650028736-ga4eaihipa7ab8a0olp75tqkqv986i2i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyBz3MtEoRVuP2Tut33r5zmzDKVCuOPRfyA"
@@ -20,7 +33,19 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "109650028736-ga4eaihipa7ab8a0olp75tqkqv986i2i.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "109650028736-bhh7lpiptt1ci7nv06uuoalds8edv97j.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.sushiApp"
+              }
+            }
+          ]
         }
       }
     }

@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -94,6 +95,16 @@ class _MenuPage extends State<MenuPage> {
                 // Update the state of the app
                 // Then close the drawer
                 Navigator.pushNamed(context, '/menupage');
+              },
+            ),
+            ListTile(
+              title: const Text('Cerrar Sesion'),
+              onTap: () async {
+                final FirebaseAuth firebaseAuth = FirebaseAuth.instance;
+                // Update the state of the app
+                // Then close the drawer
+                Navigator.pushNamed(context, '/signpage');
+                await firebaseAuth.signOut();
               },
             ),
           ],
