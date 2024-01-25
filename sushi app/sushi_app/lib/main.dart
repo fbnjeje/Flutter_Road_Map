@@ -5,6 +5,7 @@ import 'package:provider/provider.dart';
 import 'package:sushi_app/firebase_options.dart';
 import 'package:sushi_app/models/shop.dart';
 import 'package:sushi_app/screens/cart_page.dart';
+import 'package:sushi_app/screens/clicker.dart';
 import 'package:sushi_app/screens/intro_page.dart';
 import 'package:sushi_app/screens/menu_page.dart';
 import 'package:sushi_app/screens/sign_page.dart';
@@ -39,7 +40,8 @@ class MyApp extends StatelessWidget {
         '/intropage': (context) => const IntroPage(),
         '/menupage': (context) => const MenuPage(),
         '/cartpage': (context) => const CartPage(),
-        '/signpage': (context) => const SignUpPage()
+        '/signpage': (context) => const SignUpPage(),
+        '/clicker': (context) => const Clicker()
       },
     );
   }

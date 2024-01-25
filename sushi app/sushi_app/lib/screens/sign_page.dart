@@ -30,21 +30,25 @@ class _SignUpPage extends State<SignUpPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        mainAxisSize: MainAxisSize.max,
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          const Text(
-            "Iniciar sesión",
-            style: TextStyle(color: Colors.black, fontSize: 25),
-          ),
-          Offstage(
-            offstage: error == '',
-            child: const Text("error",
-                style: TextStyle(color: Colors.red, fontSize: 16)),
-          ),
-          formulario()
-        ],
+      body: Padding(
+        padding: const EdgeInsets.only(left: 25, right: 25),
+        child: Column(
+          mainAxisSize: MainAxisSize.max,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const Text(
+              "Iniciar sesión",
+              style: TextStyle(color: Colors.black, fontSize: 30),
+            ),
+            const SizedBox(height: 100),
+            Offstage(
+              offstage: error == '',
+              child: const Text("error",
+                  style: TextStyle(color: Colors.red, fontSize: 16)),
+            ),
+            formulario()
+          ],
+        ),
       ),
     );
   }

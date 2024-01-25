@@ -98,6 +98,12 @@ class _MenuPage extends State<MenuPage> {
               },
             ),
             ListTile(
+              title: const Text('Clicker'),
+              onTap: () {
+                Navigator.pushNamed(context, '/clicker');
+              },
+            ),
+            ListTile(
               title: const Text('Cerrar Sesion'),
               onTap: () async {
                 final FirebaseAuth firebaseAuth = FirebaseAuth.instance;
